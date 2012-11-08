@@ -5021,10 +5021,10 @@ QCString convertNameToFile(const char *name,bool allowDots,bool allowUnderscore)
   {
     static QDict<int> usedNames(10007);
     usedNames.setAutoDelete(TRUE);
-    static int count=1;
+    static long int count=1;
 
     int *value=usedNames.find(name);
-    int num;
+    long int num;
     if (value==0)
     {
       usedNames.insert(name,new int(count));
@@ -5034,7 +5034,7 @@ QCString convertNameToFile(const char *name,bool allowDots,bool allowUnderscore)
     {
       num = *value;
     }
-    result.sprintf("a%05d",num); 
+    result.sprintf("a%05ld",num);
   }
   else // long names
   {

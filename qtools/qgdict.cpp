@@ -996,15 +996,15 @@ QDataStream &QGDict::read( QDataStream &s )
 		break;
 	    case IntKey:
 		{
-		    Q_UINT32 k;
+		    unsigned long k;
 		    s >> k;
 		    read( s, d );
-		    look_int( k, d, op_insert );
+		    look_int( (long)k, d, op_insert );
 		}
 		break;
 	    case PtrKey:
 		{
-		    Q_UINT32 k;
+		    unsigned long k;
 		    s >> k;
 		    read( s, d );
 		    // ### cannot insert 0 - this renders the thing
