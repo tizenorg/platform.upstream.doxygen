@@ -32,9 +32,9 @@ make %{?_smp_mflags}
 %install
 %make_install
 
+%docs_package
+
 %files
 %defattr(-,root,root)
-%attr(444,root,root) %doc %{_mandir}/man1/doxygen.1.*
-%attr(444,root,root) %doc %{_mandir}/man1/doxytag.1.*
-%attr(755,root,root) /usr/bin/*
+%attr(755,root,root) %{_bindir}/*
 
