@@ -5,7 +5,7 @@ License:        GPL-2.0+
 Summary:        Automated C, C++, and Java Documentation Generator
 Url:            http://www.stack.nl/~dimitri/doxygen/
 Group:          Development/Tools
-Source:         http://ftp.stack.nl/pub/users/dimitri/doxygen-%{version}.tar.gz
+Source:         http://ftp.stack.nl/pub/users/dimitri/doxygen-%{version}.src.tar.gz
 BuildRequires:  bison
 BuildRequires:  flex
 BuildRequires:  gcc-c++
