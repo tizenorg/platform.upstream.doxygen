@@ -44,8 +44,6 @@ distclean: clean
 
 DATE=$(shell date "+%B %Y")
 
-MAN1DIR = man/man1
-
 install: doxywizard_install 
 	$(INSTTOOL) -d $(DESTDIR)/$(INSTALL)/bin
 	$(INSTTOOL) -m 755 bin/doxygen    $(DESTDIR)/$(INSTALL)/bin

@@ -491,6 +491,7 @@ INSTTOOL  = $f_insttool
 DOXYDOCS  = ..
 DOCDIR    = $f_docdir
 QTDIR     = $QTDIR
+MAN1DIR   = share/man/man1
 EOF
 
 if test "$f_dot" != NO; then
