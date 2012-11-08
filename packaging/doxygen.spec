@@ -1,13 +1,11 @@
 Name:           doxygen
-Version:        1.7.4
+Version:        1.8.2
 Release:        1
 License:        GPL-2.0+
 Summary:        Automated C, C++, and Java Documentation Generator
 Url:            http://www.stack.nl/~dimitri/doxygen/
 Group:          Development/Tools
 Source:         http://ftp.stack.nl/pub/users/dimitri/doxygen-%{version}.tar.gz
-Source1001:     packaging/doxygen.manifest
-Patch0:         doxygen-1.7.1-config.patch
 BuildRequires:  bison
 BuildRequires:  flex
 BuildRequires:  gcc-c++
@@ -22,10 +20,8 @@ as well. An executable for Windows 95/NT is also available.
 
 %prep
 %setup -q
-%patch0 -p1
 
 %build
-cp %{SOURCE1001} .
 unset QTDIR
 ./configure \
    --prefix %{_prefix} \
@@ -37,7 +33,6 @@ make %{?_smp_mflags}
 %make_install
 
 %files
-%manifest doxygen.manifest
 %defattr(-,root,root)
 %attr(444,root,root) %doc %{_mandir}/man1/doxygen.1.*
 %attr(444,root,root) %doc %{_mandir}/man1/doxytag.1.*
