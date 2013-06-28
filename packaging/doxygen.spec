@@ -6,6 +6,7 @@ Summary:        Automated C, C++, and Java Documentation Generator
 Url:            http://www.stack.nl/~dimitri/doxygen/
 Group:          Development/Tools
 Source:         http://ftp.stack.nl/pub/users/dimitri/doxygen-%{version}.src.tar.gz
+Source1001: 	doxygen.manifest
 BuildRequires:  bison
 BuildRequires:  flex
 BuildRequires:  gcc-c++
@@ -20,6 +21,7 @@ as well. An executable for Windows 95/NT is also available.
 
 %prep
 %setup -q
+cp %{SOURCE1001} .
 
 %build
 unset QTDIR
@@ -35,6 +37,7 @@ make %{?_smp_mflags}
 %docs_package
 
 %files
+%manifest %{name}.manifest
 %defattr(-,root,root)
 %attr(755,root,root) %{_bindir}/*
 
